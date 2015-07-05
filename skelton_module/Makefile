@@ -1,4 +1,4 @@
 KMOD=   skelton
-SRCS=   skelton.c
+SRCS=   skelton_module.c
 
 .include <bsd.kmodule.mk>
