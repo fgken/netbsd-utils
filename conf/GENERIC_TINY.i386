@@ -556,3 +556,15 @@ pseudo-device	tun			# network tunneling over tty
 pseudo-device	pty			# pseudo-terminals
 #options 	RND_COM			# use "com" randomness as well (BROKEN)
 pseudo-device	clockctl		# user control of clock subsystem
+
+# PCI bus support
+pci*	at mainbus? bus ?
+#pci*	at pchb? bus ?
+#pci*	at ppb? bus ?
+#pci*	at elansc? bus ?
+
+# Virtio devices
+virtio*	at pci? dev ? function ?	# Virtio PCI device
+viomb*	at virtio?			# Virtio memory balloon device
+ld*	at virtio?			# Virtio disk device
+vioif*	at virtio?			# Virtio network device
